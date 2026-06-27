@@ -1,0 +1,167 @@
+/*
+ * docs.axiu.uno 自定义样式
+ * 深色主题 + 红橙渐变，与主站 axiu.uno 品牌对齐
+ */
+
+/* ===== 基础色板 ===== */
+
+:root {
+  /* 品牌色（红橙渐变系列） */
+  --axiu-red: #e8553a;
+  --axiu-orange: #f06b52;
+  --axiu-red-dark: #c9402a;
+  --axiu-gradient: linear-gradient(135deg, #e8553a, #f0843b);
+
+  /* 深色背景 */
+  --axiu-bg: #0f1117;
+  --axiu-bg-soft: #161822;
+  --axiu-bg-alt: #1a1d2b;
+
+  /* 文字 */
+  --axiu-text: #e0e0e0;
+  --axiu-text-muted: #8b8fa3;
+}
+
+/* ===== VitePress 变量覆盖 ===== */
+
+:root {
+  --vp-c-bg: var(--axiu-bg);
+  --vp-c-bg-soft: var(--axiu-bg-soft);
+  --vp-c-bg-alt: var(--axiu-bg-alt);
+  --vp-c-bg-elv: var(--axiu-bg-soft);
+  --vp-c-bg-elv-up: var(--axiu-bg-alt);
+  --vp-c-bg-elv-down: var(--axiu-bg);
+
+  --vp-c-brand-1: var(--axiu-red);
+  --vp-c-brand-2: var(--axiu-orange);
+  --vp-c-brand-3: var(--axiu-red-dark);
+  --vp-c-brand-soft: rgba(232, 85, 58, 0.14);
+
+  --vp-c-text-1: var(--axiu-text);
+  --vp-c-text-2: var(--axiu-text-muted);
+
+  --vp-c-border: rgba(255, 255, 255, 0.06);
+  --vp-c-divider: rgba(255, 255, 255, 0.06);
+  --vp-c-gutter: var(--axiu-bg);
+
+  --vp-sidebar-width: 260px;
+}
+
+/* dark 模式保持一致的深色 */
+.dark {
+  --vp-c-bg: var(--axiu-bg);
+  --vp-c-bg-soft: var(--axiu-bg-soft);
+  --vp-c-bg-alt: var(--axiu-bg-alt);
+}
+
+/* ===== 导航栏 ===== */
+
+.VPNav {
+  background: rgba(15, 17, 23, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.VPNav .title {
+  font-weight: 600;
+}
+
+/* ===== 首页 Hero ===== */
+
+.VPHero .name {
+  background: var(--axiu-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.VPHero .tagline {
+  color: var(--axiu-text-muted);
+}
+
+.VPButton.brand {
+  background: var(--axiu-gradient);
+  border: none;
+  transition: opacity 0.2s;
+}
+
+.VPButton.brand:hover {
+  opacity: 0.85;
+}
+
+/* ===== 侧边栏链接 ===== */
+
+.VPSidebarItem.is-active > .item > .link > .text {
+  color: var(--axiu-orange);
+}
+
+.VPSidebarItem .link:hover .text {
+  color: var(--axiu-orange);
+}
+
+/* ===== 内容区 ===== */
+
+.vp-doc a {
+  color: var(--axiu-orange);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.vp-doc a:hover {
+  color: var(--axiu-red);
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  font-weight: 600;
+}
+
+/* 代码块 */
+.vp-doc div[class*='language-'] {
+  background: var(--axiu-bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+}
+
+/* ===== 自定义首页卡片（通过 raw html + class） ===== */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.home-card {
+  background: var(--axiu-bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.home-card:hover {
+  border-color: var(--axiu-red);
+  transform: translateY(-2px);
+}
+
+.home-card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--axiu-orange);
+}
+
+.home-card p {
+  color: var(--axiu-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.home-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--axiu-orange);
+  font-weight: 500;
+}

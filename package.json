@@ -1,0 +1,14 @@
+{
+  "name": "docs.axiu.uno",
+  "version": "1.0.0",
+  "description": "阿修Axiu 个人文档中心",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0"
+  }
+}
