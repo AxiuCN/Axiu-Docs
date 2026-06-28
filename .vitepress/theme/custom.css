@@ -14,12 +14,48 @@
 
   /* 深色背景 */
   --axiu-bg: #0f1117;
-  --axiu-bg-soft: #161822;
-  --axiu-bg-alt: #1a1d2b;
+  --axiu-bg-soft: #0f1117;
+  --axiu-bg-alt: #0f1117;
 
-  /* 文字 */
-  --axiu-text: #e0e0e0;
-  --axiu-text-muted: #8b8fa3;
+  /* 文字（对齐主站） */
+  --axiu-text: #f0f0f0;
+  --axiu-text-muted: rgba(255, 255, 255, 0.58);
+}
+
+/* ===== 全局字体 ===== */
+
+body {
+  font-family:
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+/* ===== 背景光晕 + 网格（对齐主站 axiu.uno） ===== */
+
+.bg-glow {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 140, 100, 0.18), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(255, 120, 120, 0.08), transparent 28%),
+    radial-gradient(circle at 70% 70%, rgba(255, 180, 120, 0.10), transparent 35%),
+    var(--axiu-bg);
+  pointer-events: none;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1), transparent 85%);
+  pointer-events: none;
 }
 
 /* ===== VitePress 变量覆盖 ===== */
@@ -42,7 +78,8 @@
 
   --vp-c-border: rgba(255, 255, 255, 0.06);
   --vp-c-divider: rgba(255, 255, 255, 0.06);
-  --vp-c-gutter: var(--axiu-bg);
+  --vp-c-gutter: transparent;
+  --vp-sidebar-bg-color: transparent;
 
   --vp-sidebar-width: 260px;
 }
@@ -66,31 +103,59 @@
   font-weight: 600;
 }
 
-/* ===== 首页 Hero ===== */
+/* ===== 首页 Hero（对齐主站 axiu.uno） ===== */
 
 .VPHero .name {
-  background: var(--axiu-gradient);
+  background: linear-gradient(135deg, #ffffff 0%, #ffd2c2 30%, #ff9f7a 65%, #ff6d6d 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.VPHero .text {
+  word-break: keep-all;
 }
 
 .VPHero .tagline {
-  color: var(--axiu-text-muted);
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.VPHero .description {
+  color: rgba(255, 255, 255, 0.56);
 }
 
 .VPButton.brand {
-  background: var(--axiu-gradient);
+  background: linear-gradient(135deg, #ff8c68, #ff6d6d);
   border: none;
-  transition: opacity 0.2s;
+  border-radius: 18px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(255, 120, 120, 0.25);
+  transition: all 0.3s ease;
 }
 
 .VPButton.brand:hover {
-  opacity: 0.85;
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+.VPButton.alt {
+  border-radius: 18px;
+  font-weight: 700;
 }
 
 /* ===== 侧边栏链接 ===== */
+
+/* 侧边栏背景透明（透出主背景光晕和网格） */
+.VPSidebar {
+  background: transparent !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.VPContent {
+  background: transparent !important;
+}
 
 .VPSidebarItem.is-active > .item > .link > .text {
   color: var(--axiu-orange);
@@ -125,7 +190,44 @@
   border-radius: 8px;
 }
 
-/* ===== 自定义首页卡片（通过 raw html + class） ===== */
+/* ===== 首页特性卡片（对齐主站 card 风格） ===== */
+
+.VPFeature {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(24px);
+  transition: all 0.35s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+}
+
+.VPFeature .icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255, 160, 120, 0.18), rgba(255, 120, 100, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VPFeature .title {
+  font-weight: 700;
+  color: #fff;
+}
+
+.VPFeature .details {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+/* ===== 自定义首页卡片（raw html 卡片） ===== */
 
 .home-grid {
   display: grid;
@@ -135,27 +237,29 @@
 }
 
 .home-card {
-  background: var(--axiu-bg-soft);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 24px;
-  transition: border-color 0.2s, transform 0.2s;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 30px;
+  backdrop-filter: blur(24px);
+  transition: all 0.35s ease;
 }
 
 .home-card:hover {
-  border-color: var(--axiu-red);
-  transform: translateY(-2px);
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
 }
 
 .home-card h2 {
   margin-top: 0;
-  font-size: 1.1rem;
-  color: var(--axiu-orange);
+  font-weight: 700;
+  color: #fff;
 }
 
 .home-card p {
-  color: var(--axiu-text-muted);
-  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.52);
   margin-bottom: 0;
 }
 
@@ -177,27 +281,26 @@
   padding: 40px 24px;
 }
 
-.VPFooter.custom-footer .container {
-  max-width: none;
+.footer-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
-}
-
-.VPFooter.custom-footer .message {
+  gap: 12px;
+  flex-wrap: wrap;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.52);
-  line-height: 1;
-  margin: 0;
 }
 
-.VPFooter.custom-footer .message a {
+.footer-divider {
+  opacity: 0.4;
+}
+
+.footer-content a {
   color: rgba(255, 255, 255, 0.62);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.VPFooter.custom-footer .message a:hover {
+.footer-content a:hover {
   color: #fff;
 }
