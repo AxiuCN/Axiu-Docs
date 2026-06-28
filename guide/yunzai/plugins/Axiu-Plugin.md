@@ -2,6 +2,24 @@
 
 > 源码仓库：<https://github.com/AxiuCN/Axiu-Plugin>
 
+---
+
+## 安装插件
+
+> 在Yunzai根目录执行命令安装
+Github
+``` bash 
+git clone --depth=1 https://github.com/AxiuCN/Axiu-Plugin ./plugins/Axiu-Plugin/
+```
+
+- 安装依赖
+``` bash
+pnpm install --filter=Axiu-Plugin
+```
+
+### 说明
+本插件阿修Axiu自用
+
 <!-- cmds-start -->
 
 ### [Axiu-Plugin]重启管理
