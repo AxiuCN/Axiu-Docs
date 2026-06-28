@@ -6,7 +6,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Axiu Docs',
-  description: '阿修Axiu 个人文档中心',
+  description: '阿修Axiu 社区手册',
   lang: 'zh-CN',
 
   head: [
@@ -36,9 +36,10 @@ export default defineConfig({
           text: 'TRSS-Yunzai',
           items: [
             { text: '概览', link: '/guide/yunzai/' },
-            { text: '部署安装', link: '/guide/yunzai/install' },
-            { text: '配置说明', link: '/guide/yunzai/config' },
-            { text: '插件指南', link: '/guide/yunzai/plugins' },
+            { text: '基础功能', link: '/guide/yunzai/basic' },
+            { text: '进阶功能', link: '/guide/yunzai/advanced' },
+            { text: '插件列表', link: '/guide/yunzai/plugins/' },
+            { text: '使用须知', link: '/guide/yunzai/notes' },
           ],
         },
       ],

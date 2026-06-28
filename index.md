@@ -3,19 +3,19 @@ layout: home
 
 hero:
   name: "Axiu Docs"
-  text: "阿修Axiu 文档中心"
-  tagline: 技术文档 · 运维记录 · 项目说明
+  text: "阿修Axiu 个人文档中心"
+  tagline: 群友指南 · 指令速查 · 服务说明
   actions:
     - theme: brand
-      text: 开始阅读
+      text: 云崽机器人
       link: /guide/yunzai/
     - theme: alt
       text: 返回主站
       link: https://axiu.uno
 
 features:
-  - title: TRSS-Yunzai
-    details: QQ 群聊机器人部署、配置、插件开发指南
+  - title: 云崽机器人
+    details: 基础功能、插件指令、使用须知
     link: /guide/yunzai/
   - title: MCSManager
     details: 面板操作、节点管理、Minecraft 服务端维护
