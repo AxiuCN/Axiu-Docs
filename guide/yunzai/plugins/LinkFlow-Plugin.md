@@ -1,6 +1,8 @@
 # LinkFlow-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/LinkFlow-Plugin>
+> 源码仓库：<https://github.com/AxiuCN/LinkFlow-Plugin>
+
+<!-- cmds-start -->
 
 ### BiliLivePush
 
@@ -85,6 +87,8 @@
 | `/^#(全体\|匿名)?取消\[bB\]站UP直播间\\s+\\S+/i` | delLiveSubByRoom |
 | `/^#直播订阅列表$/i` | listLiveSub |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

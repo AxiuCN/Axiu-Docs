@@ -1,6 +1,8 @@
 # xitian-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/xitian-plugin>
+> 源码仓库：<https://github.com/XiTianGame/xitian-plugin>
+
+<!-- cmds-start -->
 
 ### 分组
 
@@ -88,6 +90,8 @@
 | `^#插件列表$` | read |
 | `^#查看回收站$` | look |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

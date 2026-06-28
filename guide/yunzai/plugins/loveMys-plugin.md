@@ -1,5 +1,9 @@
 # loveMys-plugin
 
+> 源码仓库：<https://github.com/kissnavel/loveMys>
+
+<!-- cmds-start -->
+
 ### mys请求错误处理
 
 - **描述**：无
@@ -17,6 +21,8 @@
 | `^#loveMys(插件)?(强制)?更新$` | update |
 | `^#loveMys(插件)?更新日志$` | updateLog |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

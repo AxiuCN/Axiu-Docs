@@ -1,6 +1,8 @@
 # TianRu-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/TianRu-plugin>
+> 源码仓库：<https://gitee.com/HDTianRu/TianRu-plugin>
+
+<!-- cmds-start -->
 
 ### 我是XXX
 
@@ -117,6 +119,8 @@
 |-----------|---------|
 | `#?(H\|h)omo ?\[0-9\\.-\]+` | gethomo |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

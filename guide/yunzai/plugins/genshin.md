@@ -1,6 +1,8 @@
 # genshin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/genshin>
+> 源码仓库：<https://gitee.com/TimeRainStarSky/Yunzai-genshin>
+
+<!-- cmds-start -->
 
 ### 七圣召唤卡组查询
 
@@ -230,6 +232,8 @@
 | `^#(星铁\|原神\|崩坏三\|崩三\|绝区零\|崩坏二\|崩二\|崩坏学园二\|未定\|未定事件簿)?推送(公告\|资讯)$` | mysNewsTask |
 | `^#(星铁\|原神)(开启\|关闭)到期活动(预警)?(推送)?$` | setActivityPush |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

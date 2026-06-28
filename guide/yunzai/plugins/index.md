@@ -4,6 +4,8 @@
 
 > 来源：`F:/Yunzai/app/plugins/`
 
+<!-- cmds-start -->
+
 ## 系统插件
 
 - [系统插件](system)（9 个文件，9 条指令）
@@ -36,6 +38,7 @@
 - [xitian-plugin](xitian-plugin)（7 个模块，23 条指令）
 - [ZZZ-Plugin](ZZZ-Plugin)（23 个模块，76 条指令）
 
+<!-- cmds-end -->
 ---
 
-*页面由 commands.json 自动生成*
+← [返回插件列表](./)

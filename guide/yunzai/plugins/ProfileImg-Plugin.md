@@ -1,6 +1,8 @@
 # ProfileImg-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/ProfileImg-Plugin>
+> 源码仓库：<https://github.com/AxiuCN/ProfileImg-Plugin>
+
+<!-- cmds-start -->
 
 ### [面板图图库管理器]上传
 
@@ -81,6 +83,8 @@
 | `^#屏蔽图库更新$` | updateBlocked |
 | `^#屏蔽图库强制更新$` | forceUpdateBlocked |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

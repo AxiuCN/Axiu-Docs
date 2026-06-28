@@ -1,6 +1,8 @@
 # mctool-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/mctool-plugin>
+> 源码仓库：<https://gitee.com/Dnyo666/mctool-plugin>
+
+<!-- cmds-start -->
 
 ### MCTool-用户
 
@@ -221,6 +223,8 @@
 |-----------|---------|
 | `^$` | noop |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

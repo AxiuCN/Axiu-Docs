@@ -1,6 +1,8 @@
 # GamePush-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/GamePush-Plugin>
+> 源码仓库：<https://gitcode.com/rainbowwarmth/GamePush-Plugin>
+
+<!-- cmds-start -->
 
 ### [GamePush-Plugin]原神功能
 
@@ -102,6 +104,8 @@
 | `^#\*(%\|％\|绝区零\|zzz\|ZZZ\|绝区)获取下载链接$` | zzzDownloadLinks |
 | `^#\*(%\|％\|绝区零\|zzz\|ZZZ\|绝区)获取预下载链接$` | zzzPreDownloadLinks |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

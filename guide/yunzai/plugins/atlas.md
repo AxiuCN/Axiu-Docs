@@ -1,6 +1,8 @@
 # atlas
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/Atlas>
+> 源码仓库：<https://github.com/Nwflower/atlas>
+
+<!-- cmds-start -->
 
 ### Atlas图鉴帮助
 
@@ -43,6 +45,8 @@
 |-----------|---------|
 | `^\[#/\](原魔).\*(生命值\|攻击力).\*` | query |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

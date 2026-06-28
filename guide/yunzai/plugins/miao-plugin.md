@@ -1,6 +1,8 @@
 # miao-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/miao-plugin>
+> 源码仓库：<https://github.com/AxiuCN/miao-plugin>
+
+<!-- cmds-start -->
 
 ### 喵喵:角色查询
 
@@ -129,6 +131,8 @@
 | `/^(\\/\|#)?(喵喵)?(命令\|帮助\|菜单\|help\|说明\|功能\|指令\|使用说明)$/` | help |
 | `/^(\\/\|#)?喵喵版本$/` | version |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

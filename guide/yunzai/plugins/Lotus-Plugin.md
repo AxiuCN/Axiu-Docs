@@ -1,6 +1,8 @@
 # Lotus-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/Lotus-Plugin>
+> 源码仓库：<https://github.com/MOPELotus/Lotus-Plugin>
+
+<!-- cmds-start -->
 
 ### [荷花插件] 重构迁移
 
@@ -124,6 +126,8 @@
 |-----------|---------|
 | `(捐赠\|donate\|Donate)` | sendDonateLink |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

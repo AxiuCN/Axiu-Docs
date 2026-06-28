@@ -1,6 +1,8 @@
 # Git-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/Git-Plugin>
+> 源码仓库：<https://github.com/QingYingX-Bot/Git-Plugin>
+
+<!-- cmds-start -->
 
 ### Git-Plugin-更新
 
@@ -76,6 +78,8 @@
 - **事件**：`message`
 - **优先级**：1000
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

@@ -1,6 +1,8 @@
 # ZZZ-Plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/ZZZ-Plugin>
+> 源码仓库：<https://gitee.com/bietiaop/ZZZ-Plugin>
+
+<!-- cmds-start -->
 
 ### [ZZZ-Plugin]abyss
 
@@ -285,6 +287,8 @@
 | `^((#\|%\|/)?(zzz\|ZZZ\|绝区零))(.\*)(天赋\|技能)(.\*)$` | skills |
 | `^((#\|%\|/)?(zzz\|ZZZ\|绝区零))(.\*)(意象影画\|意象\|影画\|命座)$` | cinema |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

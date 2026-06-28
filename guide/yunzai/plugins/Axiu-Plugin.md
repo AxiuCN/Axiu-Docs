@@ -2,6 +2,8 @@
 
 > 源码仓库：<https://github.com/AxiuCN/Axiu-Plugin>
 
+<!-- cmds-start -->
+
 ### [Axiu-Plugin]重启管理
 
 - **描述**：#重启 (MCS云崽实例)
@@ -27,6 +29,8 @@
 |-----------|---------|
 | `^#排队$` | endgameQueue |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

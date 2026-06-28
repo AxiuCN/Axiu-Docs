@@ -1,6 +1,8 @@
 # xiaoyao-cvs-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/xiaoyao-cvs-plugin>
+> 源码仓库：<https://github.com/MOPELotus/xiaoyao-cvs-plugin>
+
+<!-- cmds-start -->
 
 ### xiaoyao-cvs-plugin
 
@@ -12,6 +14,8 @@
 |-----------|---------|
 | `.+` | dispatch |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

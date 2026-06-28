@@ -1,6 +1,8 @@
 # Guoba-Plugin
 
-> 源码仓库：<https://github.com/Guoba-Plugin/Guoba-Plugin>
+> 源码仓库：<https://gitee.com/guoba-yunzai/guoba-plugin>
+
+<!-- cmds-start -->
 
 ### 锅巴:兼容V2
 
@@ -40,6 +42,8 @@
 | `^#?锅巴(帮助\|菜单\|说明\|功能\|指令\|命令\|使用说明\|help)$` | getHelp |
 | `^#锅巴重启$` | restart |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)

@@ -1,6 +1,8 @@
 # mcsmanager-plugin
 
-> 源码仓库：<https://github.com/yoimiya-kokomi/mcsmanager-plugin>
+> 源码仓库：<https://github.com/A1Panda/mcsmanager-plugin>
+
+<!-- cmds-start -->
 
 ### MCSManager-绑定
 
@@ -90,6 +92,8 @@
 | `^#?(mcs\|MCS)\\s\*(修改权限\|setperm)\\s\*.\*$` | changePermission |
 | `^#?(mcs\|MCS)\\s\*(重置密码\|resetpwd)\\s\*.\*$` | resetPassword |
 
+
+<!-- cmds-end -->
 ---
 
 ← [返回插件列表](./)
