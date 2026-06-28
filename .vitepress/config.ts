@@ -11,7 +11,6 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['script', {}, "document.addEventListener('DOMContentLoaded',function(){var e=document.querySelector('.VPFooter .message');if(e){var m=e.textContent.match(/闽ICP备\\d+号-\\d+/);if(m){e.innerHTML=e.textContent.replace(m[0],'<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:none;\">'+m[0]+'</a>')}}})"],
   ],
 
   /* 排除非文档文件 */
