@@ -10,6 +10,7 @@ export default defineConfig({
   lang: 'zh-CN',
 
   head: [
+    ['script', { src: '/footer-icp.js' }],
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
 
@@ -98,11 +99,7 @@ export default defineConfig({
     ],
 
     /* 页脚 */
-    footer: {
-      message: 'Axiu Network',
-      copyright: `© 2026 阿修Axiu
-闽ICP备2026017611号-1`,
-    },
+    footer: { message: '© 2026 阿修Axiu · Axiu Network', copyright: '闽ICP备2026017611号-1' },
 
     /* 搜索 */
     search: {

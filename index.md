@@ -28,6 +28,3 @@ features:
     link: /projects/
 ---
 
-<div style="text-align:center;margin-top:48px;color:var(--vp-c-text-2);font-size:14px">
-  Axiu Network · <a href="https://github.com/AxiuCN" style="color:var(--vp-c-brand-1)">AxiuCN</a>
-</div>
