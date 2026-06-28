@@ -109,7 +109,7 @@ http://host:6192/git/webhook
 https://githook.example.com/git/webhook
 ```
 
-默认推送 Issues / PR / Push 相关事件，并过滤 closed。事件列表和其他事件含义见 [WEBHOOK_EVENTS.md](WEBHOOK_EVENTS.md)。
+默认推送 Issues / PR / Push 相关事件，并过滤 closed。事件列表和其他事件含义见 [WEBHOOK_EVENTS.md](https://github.com/QingYingX-Bot/Git-Plugin/blob/main/WEBHOOK_EVENTS.md)。
 
 #### 仓库卡片
 

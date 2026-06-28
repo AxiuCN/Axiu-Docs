@@ -88,7 +88,7 @@ git -C plugins/miao-plugin remote set-url origin https://gitee.com/AxiuCN/miao-p
 
 ---
 
-**在有一定阅读理解能力基础下，建议阅读 [CHANGELOG.md](CHANGELOG.md) 以了解更多内容。**
+**在有一定阅读理解能力基础下，建议阅读 [CHANGELOG.md](https://github.com/AxiuCN/miao-plugin/blob/main/CHANGELOG.md) 以了解更多内容。**
 
 其余文档咕咕咕中
 

@@ -132,17 +132,17 @@ git clone --depth=1 https://gitee.com/bietiaop/ZZZ-Plugin.git ./plugins/ZZZ-Plug
 
 * 提交前请确保本地已运行 `pnpm check`，能够成功通过且无报错
 
-* 代码风格请参考 [eslint.config.mjs](./eslint.config.mjs)
+* 代码风格请参考 [eslint.config.mjs](https://gitee.com/bietiaop/ZZZ-Plugin/blob/main/eslint.config.mjs)
   * 代码自检：`pnpm lint`
   * 自动修复：`pnpm lint:fix`
 
 ### TS 环境、编译
 
-* 在宿主环境下（如将插件安装于 Miao-Yunzai 中进行开发），可使用 [tsconfig.json](./tsconfig.json) 作为 ts 环境配置
+* 在宿主环境下（如将插件安装于 Miao-Yunzai 中进行开发），可使用 [tsconfig.json](https://gitee.com/bietiaop/ZZZ-Plugin/blob/main/tsconfig.json) 作为 ts 环境配置
   * 全部编译：`pnpm build`
   * 监听编译：`pnpm watch`
 
-* 在脱离宿主环境下（如独立开发或在 github actions 中编译），可使用 [tsconfig.src.json](./tsconfig.src.json) 作为 ts 环境配置
+* 在脱离宿主环境下（如独立开发或在 github actions 中编译），可使用 [tsconfig.src.json](https://gitee.com/bietiaop/ZZZ-Plugin/blob/main/tsconfig.src.json) 作为 ts 环境配置
   * 全部编译：`pnpm build:src`
   * 监听编译：`pnpm watch:src`
 
@@ -150,7 +150,7 @@ git clone --depth=1 https://gitee.com/bietiaop/ZZZ-Plugin.git ./plugins/ZZZ-Plug
 
 * 本项目的样式使用 scss 编写
 
-* 项目的 scss 文件集中在 [resources](./resources/) 的子目录，开发时请编写/修改 scss，请勿提交 css
+* 项目的 scss 文件集中在 [resources](https://gitee.com/bietiaop/ZZZ-Plugin/tree/main/resources) 的子目录，开发时请编写/修改 scss，请勿提交 css
   * 全部编译：`pnpm build:css`
   * 监听编译：`pnpm watch:css`
 
@@ -181,7 +181,7 @@ git clone --depth=1 https://gitee.com/bietiaop/ZZZ-Plugin.git ./plugins/ZZZ-Plug
 ## 其他
 
 - 本项目仅供学习使用，请勿用于商业用途
-- [GPL-3.0 License](./LICENSE)
+- [GPL-3.0 License](https://gitee.com/bietiaop/ZZZ-Plugin/blob/main/LICENSE)
 
 <!-- cmds-start -->
 

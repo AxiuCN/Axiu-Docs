@@ -160,7 +160,7 @@ MCSManager 采用前后端分离设计，后端使用 Node.js 开发，前端使
 
 ### 📄 开源许可
 
-本项目采用 [GPL-3.0](./LICENSE) 许可证。
+本项目采用 [GPL-3.0](https://github.com/A1Panda/mcsmanager-plugin/blob/main/LICENSE) 许可证。
 
 ---
 

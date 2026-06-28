@@ -4,8 +4,6 @@
 
 ---
 
-<img decoding="async" align=right src="resource/img/logo_atlas.png" width="25%">
-
 ## Atlas
 Atlas是一个适用于V3版本及以上Yunzai-Bot的图鉴查询插件，可通过Yunzai-Bot查询游戏图鉴，插件代码严格遵循ES6规范。
 

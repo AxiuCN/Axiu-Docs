@@ -4,7 +4,6 @@
 
 ---
 
-![logo](resources/img/head.jpg)
 <div align=center>
  <img src ="https://img.shields.io/github/stars/XiTianGame/xitian-plugin?"/>
  <img src ="https://img.shields.io/github/issues/XiTianGame/xitian-plugin?logo=github"/>

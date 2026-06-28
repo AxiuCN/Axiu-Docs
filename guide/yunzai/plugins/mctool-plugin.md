@@ -6,8 +6,6 @@
 
 ![MCTool-Plugin](https://socialify.git.ci/Dnyo666/MCTool-Plugin/image?description=1&font=Raleway&forks=1&issues=1&language=1&name=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Auto)
 
-<img decoding="async" align=right src="resources/readme/background.png" width="35%">
-
 ## MC工具箱插件🎮
 
 基于 Yunzai-Bot v3 的 Minecraft 服务器管理插件，支持服务器状态查询、玩家绑定、进群验证等功能。
@@ -112,11 +110,11 @@ pnpm install
 <div align="center">
   <div style="display: inline-block; text-align: center; margin: 10px;">
     <p><b>行走视图渲染</b></p>
-    <img src="resources/readme/walking-view.png" width="400" alt="行走视图渲染示例">
+    <!-- 图片略：resources/readme/walking-view.png -->
   </div>
   <div style="display: inline-block; text-align: center; margin: 10px;">
     <p><b>站立视图渲染</b></p>
-    <img src="resources/readme/standing-view.png" width="440" alt="站立视图渲染示例">
+    <!-- 图片略：resources/readme/standing-view.png -->
   </div>
 </div>
 
@@ -372,7 +370,7 @@ mod:
 
 ### 许可证
 
-项目采用 [GPL-3.0](./LICENSE) 许可证，这意味着：
+项目采用 [GPL-3.0](https://gitee.com/Dnyo666/mctool-plugin/blob/main/LICENSE) 许可证，这意味着：
 
 1. 您可以自由使用、修改和分发本软件
 2. 如果您分发修改后的版本，必须同样遵循 GPL-3.0 协议

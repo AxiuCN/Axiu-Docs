@@ -203,7 +203,7 @@ GamePush-Plugin/
 
 ### 📄 许可证
 
-本项目基于 [MIT License](LICENSE) 开源协议。
+本项目基于 [MIT License](https://gitcode.com/rainbowwarmth/GamePush-Plugin/blob/main/LICENSE) 开源协议。
 
 ---
 
