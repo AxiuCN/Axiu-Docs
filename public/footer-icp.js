@@ -1,1 +1,0 @@
-document.addEventListener("DOMContentLoaded",function(){var c=document.querySelector(".VPFooter .copyright");if(c){var m=c.textContent.match(/闽ICP备\d+号-\d+/);if(m){c.innerHTML="<a href=\"https://beian.miit.gov.cn/\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:none;\">"+m[0]+"</a>"}}});

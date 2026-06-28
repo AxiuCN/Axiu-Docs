@@ -165,3 +165,40 @@
   color: var(--axiu-orange);
   font-weight: 500;
 }
+
+/* ===== 页脚（对齐主站 axiu.uno） ===== */
+
+.VPFooter {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: transparent;
+  padding: 40px 24px;
+}
+
+.VPFooter .container {
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.VPFooter .message {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1;
+  margin: 0;
+}
+
+.VPFooter .message a {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.VPFooter .message a:hover {
+  color: #fff;
+}
+
+.VPFooter .copyright {
+  display: none;
+}
