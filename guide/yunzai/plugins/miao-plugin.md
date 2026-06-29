@@ -114,6 +114,10 @@ git -C plugins/miao-plugin remote set-url origin https://gitee.com/AxiuCN/miao-p
 * [Enka.Network](https://enka.network/): 感谢Enka提供的面板服务
 * [Snap.Hutao](https://hut.ao/) : 感谢 DGP Studio 开发的 [胡桃 API](https://github.com/DGP-Studio/Snap.Hutao.Server)
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### 喵喵:角色查询

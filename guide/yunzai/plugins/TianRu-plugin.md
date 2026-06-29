@@ -107,6 +107,10 @@ npm install pnpm -g
 github：[https://github.com/HDTianRu/TianRu-plugin](https://github.com/HDTianRu/TianRu-plugin)  
 gitee：[https://gitee.com/HDTianRu/TianRu-plugin](https://gitee.com/HDTianRu/TianRu-plugin)
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### 我是XXX

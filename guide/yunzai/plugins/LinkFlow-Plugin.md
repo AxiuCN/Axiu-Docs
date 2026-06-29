@@ -161,6 +161,10 @@ LinkFlow-Plugin/
 - [BBDown](https://github.com/nilaoda/BBDown) — B站视频下载
 - [astrbot_plugin_media_parser](https://github.com/drdon1234/astrbot_plugin_media_parser) — 多平台视频解析引擎
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### BiliLivePush

@@ -133,7 +133,7 @@ for (const [dir, data] of Object.entries(dirPages)) {
     auto += '## ' + item.file + '\n\n';
     for (const m of item.mods) auto += renderMod(m);
   }
-  const header = '# ' + data.label + '\n\n> 路径：`' + dir + '/` · 本目录下每个文件即为一个独立插件\n\n---\n\n';
+  const header = '# ' + data.label + '\n\n> 路径：`' + dir + '/` · 本目录下每个文件即为一个独立插件\n\n---\n\n## 指令列表\n\n';
   writePage(dir + '.md', auto, header);
   console.log('  ' + dir + '.md');
 }
@@ -143,7 +143,7 @@ for (const p of regular) {
   const fn = toFile(p.path);
   let auto = '';
   for (const m of p.mods) auto += renderMod(m);
-  const header = '# ' + p.path + '\n\n';
+  const header = '# ' + p.path + '\n\n> 源码仓库：\n\n\n---\n\n## 指令列表\n\n';
   writePage(fn, auto, header);
   console.log('  ' + fn);
 }

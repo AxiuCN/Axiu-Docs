@@ -58,6 +58,10 @@ git clone https://github.com/MOPELotus/xiaoyao-cvs-plugin.git ./plugins/xiaoyao-
 - 喵喵Miao-Plugin QQ群：755269874 （暂时停止新加入）
 - 闲聊群 342996701
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### xiaoyao-cvs-plugin

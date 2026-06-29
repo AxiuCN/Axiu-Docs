@@ -361,6 +361,10 @@ model/webhookServer.js   Webhook 接收
 
 平台 API 差异放在 Provider 内，命令层只解析消息并调用统一接口。
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### Git-Plugin-更新

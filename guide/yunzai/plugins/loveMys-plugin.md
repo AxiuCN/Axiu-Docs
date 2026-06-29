@@ -27,6 +27,10 @@ pnpm install --filter=loveMys-plugin
 
 2、绑定设备需配合<a href="https://github.com/kissnavel/genshin">genshin</a>使用。
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### mys请求错误处理

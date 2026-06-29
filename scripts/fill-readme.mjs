@@ -101,9 +101,10 @@ function fillPage(pagePath, readmePath) {
     return line;
   }).join('\n');
 
-  // 组装：手写区 + 换行 + README + <!-- cmds-start -->
+  // 组装：手写区 + README + 分割线 + <!-- cmds-start -->
   const after = page.slice(cmdsIdx);
-  const newPage = before.trimEnd() + '\n\n---\n\n' + processed.trim() + '\n\n' + after;
+  const cmdsHeading = before.includes('## 指令列表') ? '' : '\n---\n\n## 指令列表\n';
+  const newPage = before.trimEnd() + '\n\n---\n\n' + processed.trim() + cmdsHeading + '\n\n' + after;
 
   writeFileSync(pagePath, newPage);
   console.log('  已填充: ' + basename(pagePath));

@@ -112,6 +112,10 @@ npm install express multer jsonwebtoken
     - [gitee](https://github.com/yoimiya-kokomi/miao-plugin)
     - [github](https://github.com/yoimiya-kokomi/miao-plugin)
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### 锅巴:兼容V2

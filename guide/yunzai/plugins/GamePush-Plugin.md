@@ -234,6 +234,10 @@ GamePush-Plugin/
 
 </div>
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### [GamePush-Plugin]原神功能

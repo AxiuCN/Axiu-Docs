@@ -110,6 +110,10 @@ ps：插件管理器会自动进行依赖安装
 
 [![Star History Chart](https://api.star-history.com/svg?repos=XiTianGame/xitian-plugin&type=Date)](https://star-history.com/#XiTianGame/xitian-plugin&Date)
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### 分组

@@ -171,6 +171,10 @@ MCSManager 采用前后端分离设计，后端使用 Node.js 开发，前端使
   <img src="https://img.shields.io/badge/Made%20with-❤️-blue" alt="made with love">
 </div>
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### MCSManager-绑定

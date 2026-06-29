@@ -183,6 +183,10 @@ git clone --depth=1 https://gitee.com/bietiaop/ZZZ-Plugin.git ./plugins/ZZZ-Plug
 - 本项目仅供学习使用，请勿用于商业用途
 - [GPL-3.0 License](https://gitee.com/bietiaop/ZZZ-Plugin/blob/main/LICENSE)
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### [ZZZ-Plugin]abyss

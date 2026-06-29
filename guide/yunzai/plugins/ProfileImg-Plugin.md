@@ -54,6 +54,10 @@ pnpm install -P --filter ProfileImg-Plugin
 
 如有问题，请加入 QQ 群 **965272093** 交流反馈。
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### [面板图图库管理器]上传

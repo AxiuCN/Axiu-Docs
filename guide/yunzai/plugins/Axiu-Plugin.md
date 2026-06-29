@@ -20,6 +20,10 @@ pnpm install --filter=Axiu-Plugin
 ### 说明
 本插件阿修Axiu自用
 
+---
+
+## 指令列表
+
 <!-- cmds-start -->
 
 ### [Axiu-Plugin]重启管理
