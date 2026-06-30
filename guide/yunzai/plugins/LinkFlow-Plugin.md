@@ -218,6 +218,7 @@ LinkFlow-Plugin/
 | `/^#领取每日激励$/i` | cmdDailyClaim |
 | `/^#(添加\|增加)激励白名单\\s\*/i` | cmdAddWhitelist |
 | `/^#(删除\|移除)激励白名单\\s\*/i` | cmdRemoveWhitelist |
+| `/^#领取激励\\s+\\d+(\\.\[\\d\]+)?\\s+\\d+\\s+\\d+\\s+\\S+$/i` | cmdManualClaim |
 | `/^#激励白名单$/i` | cmdWhitelist |
 
 ### [LinkFlow]账号登录

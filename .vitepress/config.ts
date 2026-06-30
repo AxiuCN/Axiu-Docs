@@ -38,7 +38,7 @@ export default defineConfig({
             { text: '概览', link: '/guide/yunzai/' },
             { text: '基础功能', link: '/guide/yunzai/basic' },
             { text: '进阶功能', link: '/guide/yunzai/advanced' },
-                                                { text: '插件列表', collapsed: true, items: [
+                                                            { text: '插件列表', collapsed: true, items: [
               { text: '概览', link: '/guide/yunzai/plugins/' },
               { text: '系统插件', link: '/guide/yunzai/plugins/system' },
               { text: '工具插件', link: '/guide/yunzai/plugins/other' },
