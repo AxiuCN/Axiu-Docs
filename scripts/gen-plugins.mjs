@@ -1,6 +1,6 @@
 /*
  * docs.axiu.uno 插件页面生成器
- * 读取 F:/Yunzai/app/plugins/example/commands.json，生成插件指令文档
+ * 读取 Y:/app/plugins/example/commands.json，生成插件指令文档
  * 用法：cd docs.axiu.uno && node scripts/gen-plugins.mjs
  *
  * 页面结构：
@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const base = resolve(__dirname, '..').replace(/\\/g, '/');
 const outDir = base + '/guide/yunzai/plugins/';
-const raw = JSON.parse(readFileSync('F:/Yunzai/app/plugins/example/commands.json', 'utf-8'));
+const raw = JSON.parse(readFileSync('Y:/app/plugins/example/commands.json', 'utf-8'));
 
 /* ======== 按 path 聚合 ======== */
 const pathMap = new Map();
@@ -133,7 +133,7 @@ for (const [dir, data] of Object.entries(dirPages)) {
     auto += '## ' + item.file + '\n\n';
     for (const m of item.mods) auto += renderMod(m);
   }
-  const header = '# ' + data.label + '\n\n> 路径：`' + dir + '/` · 本目录下每个文件即为一个独立插件\n\n---\n\n## 指令列表\n\n';
+  const header = '# ' + data.label + '\n\n---\n\n## 指令列表\n\n';
   writePage(dir + '.md', auto, header);
   console.log('  ' + dir + '.md');
 }
@@ -161,7 +161,7 @@ for (const p of regular) {
   idxAuto += '- [' + p.path + '](' + link + ')（' + p.mods.length + ' 个模块，' + totalCmds(p.mods) + ' 条指令）\n';
 }
 
-const idxHeader = '# 插件列表\n\n本页汇总 TRSS-Yunzai 所有已安装插件。\n\n> 来源：`F:/Yunzai/app/plugins/`\n\n';
+const idxHeader = '# 插件列表\n\n本页汇总 TRSS-Yunzai 所有已安装插件。\n\n';
 writePage('index.md', idxAuto, idxHeader);
 console.log('  index.md');
 

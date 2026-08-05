@@ -1,116 +1,49 @@
-# Guoba-Plugin
+# Guoba-Plugin / 锅巴插件
 
 > 源码仓库：<https://gitee.com/guoba-yunzai/guoba-plugin>
 
 ---
 
-`Guoba-Plugin`是`Yunzai-Bot`的扩展插件，主要提供后台管理界面。
+锅巴插件是 Yunzai-Bot 的 Web 后台管理面板，把大多数管理操作搬进浏览器：可视化编辑配置文件、安装 / 卸载 / 配置插件、编辑喵喵帮助、V2 数据迁移等。聊天指令是辅助入口——用于获取访问地址、查看版本、更新插件、重载服务。
 
-> 管理面板仅支持V3版本的Yunzai；V2版本Yunzai仅支持迁移至V3功能。
+> 管理面板仅支持 V3 版本的 Yunzai；V2 版本 Yunzai 仅支持迁移至 V3 功能。
 
-具体功能可在安装插件后，通过发送`#锅巴帮助`来进行查看。
+面板默认监听端口 `50831`（可在 `config/application.yaml` 修改），启动时控制台会打印访问地址，复制到浏览器即可访问。面板仅限主人登录使用。
 
-### 已实现的功能
+## 指令说明
 
-- [x] 主人登录
-    - [x] #锅巴登录
-    - [x] 控制台验证码登录
-- [x] 配置文件管理
-- [x] plugin插件管理
-    - [x] plugin插件配置
-    - [x] 安装、卸载插件 [@0卡苏打水](https://github.com/CikeyQi)
-- [x] 编辑喵喵帮助 [@realhuhu](https://github.com/realhuhu)
-- [x] V2云崽丝滑迁移至V3（[视频教程](https://www.bilibili.com/video/BV1fP411T7KM)）
+以下指令说明供 bot 使用者（群友 / 管理员）参考，标「主人」的指令仅机器主人可用。
 
-[TODO代办](https://gitee.com/guoba-yunzai/resources/blob/master/other/TODO.md)
+### 面板访问
 
-### 安装插件
+| 指令 | 权限 | 说明 |
+|------|------|------|
+| `#锅巴帮助` | 主人 | 查看锅巴帮助与使用说明 |
+| `#锅巴登录` | 主人 | 生成面板访问地址（自定义 / 内网 / 外网）并附临时登录令牌，3 分钟有效、用后即失效；也可在 bot 控制台通过验证码登录 |
 
-##### 第 1 步：下载插件
+> `#锅巴登录` 的规则定义虽未限制权限，但方法内校验主人身份，非主人发送会被忽略；群聊中默认将地址私信发送给主人。
 
-在云崽根目录下打开终端，运行：
+### 版本与更新
 
-* 使用 Gitee
-``` bash
-git clone --depth=1 https://gitee.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
-```
+| 指令 | 权限 | 说明 |
+|------|------|------|
+| `#锅巴版本` | 所有人 | 查看锅巴插件当前版本（唯一 all 级指令） |
+| `#锅巴更新` | 主人 | 从 git 仓库拉取更新（`git pull --rebase`） |
+| `#锅巴强制更新` | 主人 | 强制更新：先 `git fetch` 再 `git reset --hard` 重置到远程分支，会丢弃本地改动，请谨慎使用 |
 
-* 使用 Github
-``` bash
-git clone --depth=1 https://github.com/guoba-yunzai/guoba-plugin.git ./plugins/Guoba-Plugin/
-```
+### 服务重载
 
-> 注：根据你的网络情况选择不同的仓库地址，在国内使用Gitee相对稳定
+| 指令 | 权限 | 说明 |
+|------|------|------|
+| `#锅巴重启` | 主人 | 重载锅巴 Web 服务（同时重新扫描各插件的 `guoba.support.js`），无需重启 bot |
 
-##### 第 2 步：安装依赖
+### 面板功能
 
-###### 方式1：采用 pnpm
-
-> 注：如果你不是通过`pnpm`安装的云崽，那么请【**不要**】使用此方式，请看`方式2`
-
-如果你是使用`pnpm`安装的云崽，那么只需要在云崽根目录下运行此命令即可：
-
-```bash
-pnpm install --filter=guoba-plugin
-```
-
-> 注：请务必直接复制提供的命令，否则可能会导致依赖丢失的情况，若发生需自行重新安装。<br>
-> `--filter=guoba-plugin`：只安装`guoba-plugin`下的依赖，其他依赖不处理，防止丢失。
-
-###### 方式2：采用 npm 或 cnpm
-
-如果是使用`npm`或`cnpm`等其他依赖安装工具，需要手动安装以下依赖：
-
-```bash
-npm install express multer jsonwebtoken
-```
-
-如果以上命令执行失败，可尝试使用`cnpm`进行安装，只需将开头的`npm`替换成`cnpm`即可。
-
-> 注：cnpm需要单独安装，已安装的可以忽略，安装命令如下：<br>
-> `npm install cnpm -g --registry=https://registry.npmmirror.com`
-
-##### 第 3 步：运行插件
-
-依赖安装完毕之后，直接运行即可，默认运行端口号是：50831
-
-> 可在 config/application.yaml 中修改
-
-启动完成之后，可以在控制台中看到网页地址，复制到浏览器中即可访问。
-
-如果访问不到，请发送`#锅巴帮助`指令获取帮助。
-
-### 更新插件
-
-一般会自动更新，如需手动更新，请发送`#锅巴更新`指令
-
-## 功能预览
-
-- 主界面
-- 查看插件README
-- 基础配置
-- 群组配置
-- 编辑喵喵帮助
-
-## 免责声明
-
-1. 功能仅限内部交流与小范围使用，严禁将Guoba-Plugin用于任何商业用途或盈利
-2. 图片与其他素材均来自于网络，仅供交流学习使用，如有侵权请联系，会立即删除
-
-## 其他
-
-- 最后求个个star或者[爱发电](https://afdian.net/a/zolay-poi)
-  你的支持是维护本项目的动力~
-
-* Yunzai-Bot
-    - [gitee](https://gitee.com/Le-niao/Yunzai-Bot)
-    - [github](https://github.com/Le-niao/Yunzai-Bot)
-* Yunzai插件索引
-    - [gitee](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
-    - [github](https://github.com/yhArcadia/Yunzai-Bot-plugins-index)
-* Miao-Plugin
-    - [gitee](https://github.com/yoimiya-kokomi/miao-plugin)
-    - [github](https://github.com/yoimiya-kokomi/miao-plugin)
+- **配置文件管理**：可视化编辑 bot 配置文件（`bot.yaml` / `group.yaml` / `other.yaml` / `redis.yaml` 等），改动即时生效
+- **插件管理**：安装 / 卸载插件、查看插件 README、配置已接入锅巴的插件
+- **编辑喵喵帮助**：可视化编辑 miao-plugin 帮助
+- **V2 → V3 迁移**：旧版云崽数据丝滑迁移至 V3
+- **系统信息**：首页系统状态、磁盘信息等
 
 ---
 
@@ -158,6 +91,13 @@ npm install express multer jsonwebtoken
 
 
 <!-- cmds-end -->
+
+## 鸣谢
+
+- [@0卡苏打水](https://github.com/CikeyQi) — 插件安装、卸载功能
+- [@realhuhu](https://github.com/realhuhu) — 编辑喵喵帮助功能
+- [@吃吃吃个柚子皮](https://gitee.com/guoba-yunzai/guoba-plugin/pulls/2) — 本地 / 外网 IP 地址获取
+
 ---
 
 ← [返回插件列表](./)

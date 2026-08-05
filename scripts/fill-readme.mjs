@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const base = resolve(__dirname, '..').replace(/\\/g, '/');
 const pluginsDir = base + '/guide/yunzai/plugins/';
-const yunzaiDir = 'F:/Yunzai/app/plugins/';
+const yunzaiDir = 'Y:/app/plugins/';
 
 // 插件目录名 → 文档页文件名
 const pluginPages = {

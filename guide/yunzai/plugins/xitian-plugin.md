@@ -1,114 +1,82 @@
-# xitian-plugin
+# xitian-plugin / 插件管理器
 
 > 源码仓库：<https://github.com/XiTianGame/xitian-plugin>
 
 ---
 
-<div align=center>
- <img src ="https://img.shields.io/github/stars/XiTianGame/xitian-plugin?"/>
- <img src ="https://img.shields.io/github/issues/XiTianGame/xitian-plugin?logo=github"/>
- <img src ="https://img.shields.io/github/license/XiTianGame/xitian-plugin"/>
- <img src ="https://img.shields.io/github/languages/top/XiTianGame/xitian-plugin?logo=github"/>
-</div>
+Yunzai-Bot V3 的 js 插件管理器：支持通过发送 js 文件或仓库地址安装插件、停用 / 启用 / 删除 / 恢复、分组管理、命令冲突调试与插件核验。主要针对单个 js 文件插件（大型插件仅支持列表查看，不支持安装管理）。
 
-## 插件管理器xitian-plugin
+## 指令说明
 
-仅支持js类插件管理，~~不支持喵喵插件等大型插件管理~~
+以下指令供 bot 使用者（群友 / 管理员）参考。xitian-plugin 的指令**默认仅主人可用**，可在锅巴后台「Xitian-Plugin」的 auth 配置中调整：
 
-支持了一点，但不多(bushi)
+- `auth.grade`：放行群主（owner）/ 群管理（admin）/ 所有人（everyone）
+- `auth.accredit`：授权指定 QQ 操作
+- `auth.group`：关闭后群聊内不可使用
+- 当 `grade` 与 `accredit` 均为空时，默认仅主人可用
 
-### 已经实现的功能
+### 安装插件
 
-- [x] 插件管理
-    - [x] 查看全部插件
-    - [x] 插件启用停用
-    - [x] 插件删除恢复
-    - [x] 插件重命名
-    - [x] 插件查找
-    - [x] 查看插件
-- [x] 插件分组管理
-    - [x] 创建删除分组
-    - [x] 插件设置分组
-    - [x] 同步plugins目录下的分组
-- [x] 命令
-    - [x] 命令总览
-    - [x] 测试命令
-- [x] 插件智能覆盖安装
-- [x] 插件智能重命名
-- [x] 更新插件
-- [x] 插件管理权限控制
-- [x] 插件核验
-    - [x] V2插件识别
-- [x] plugin插件管理
-    - [x] 插件通过网址安装
-    - [x] 删除git插件
+| 指令 | 说明 |
+|------|------|
+| `#安装插件` | 发送指令后直接发送 js 文件即可安装，默认安装到 `default_group` 分组 |
+| `#安装插件 <github/gitee 仓库地址>` | 从仓库克隆插件到 plugins/ 目录，可选自动安装依赖，装完自动重启 |
+| `#开始批量安装插件` / `#结束批量安装插件` | 进入 / 退出批量安装模式，期间可连续发送多个 js 文件；`#取消安装插件` 可中途取消 |
+| `#清空回收站` | 清空回收站内全部插件（需回复「是」确认，不可找回） |
 
-#### 介绍
-Yunzai-Bot V3 的插件
-为用户提供插件管理功能
-js插件可以从[插件库](https://gitee.com/Hikari666/Yunzai-Bot-plugins-index)或其他渠道获取
+智能安装 / 智能重命名 / 插件核验默认开启（锅巴 js 配置可单独关闭）：
 
-### 使用说明
+- **智能安装**：检测到同名 / 相似插件时，自动将旧插件移入回收站再覆盖安装
+- **智能重命名**：按词库清除文件名中的 `v`、`V`、版本号、符号等干扰字符后安装，避免同一插件重复安装
+- **插件核验**：解析文件检查导出类型是否合法，并提示 `fs` / `child_process` 等敏感模块；核验通过才启用（不通过则保持停用态 `.bak`）
 
-#### 安装
+### 插件管理
 
-在[yunzai-bot](https://gitee.com/Le-niao/Yunzai-Bot)文件夹根目录打开cmd
+| 指令 | 说明 |
+|------|------|
+| `#插件列表` | 图片展示所有分组下的插件及其启用状态 |
+| `#查找插件 xxx` | 在全部插件中按名字查找 |
+| `#停用插件 xxx` | 停用插件（文件改为 `.bak`，立即生效） |
+| `#启用插件 xxx` | 启用已停用插件 |
+| `#删除插件 xxx` | 将插件移入回收站（可恢复） |
+| `#彻底删除插件 xxx` | 物理删除插件，不可找回（需回复「是」确认） |
+| `#恢复插件 xxx` | 从回收站恢复到原分组（原分组不存在则回默认分组） |
+| `#查看回收站` | 列出回收站内的插件 |
+| `#插件 xxx 重命名 yyy` | 重命名插件文件 |
+| `#查看插件 xxx` | 将插件文件发送到当前会话（群聊上传群文件，私聊发送离线文件） |
 
-使用[github仓库](https://github.com/XiTianGame/xitian-plugin)
-```bash
-git clone --depth=1 https://github.com/XiTianGame/xitian-plugin.git ./plugins/xitian-plugin/
-```
+- `#删除插件 <git插件名>`（如 `#删除插件 xitian-plugin`）会直接删除整个 git 插件目录，**不走回收站**
+- 停用 / 启用 / 删除 / 恢复等操作匹配到多个插件时，会列出序号供你选择
 
-使用[gitee仓库](https://gitee.com/XiTianGame/xitian-plugin)(可能更新不及时)
-```bash
-git clone --depth=1 https://gitee.com/XiTianGame/xitian-plugin.git ./plugins/xitian-plugin/
-```
+### 插件分组
 
-#### 安装依赖
+js 插件按文件夹分组管理（plugins 目录下每个子目录即一个分组）。
 
-```bash
-pnpm install --filter=xitian-plugin
-```
-ps：插件管理器会自动进行依赖安装
+| 指令 | 说明 |
+|------|------|
+| `#分组列表` | 查看现有分组 |
+| `#创建分组 xxx` | 新建分组文件夹 |
+| `#删除分组 xxx` | 删除分组（需分组内为空） |
+| `#xxx设置分组 yyy` | 将插件 xxx 移动到分组 yyy |
+| `#同步分组` | 扫描 plugins 目录，自动把存在的文件夹同步为分组（排除 exclude 列表中的目录） |
 
-#### 帮助
+### 命令调试
 
-插件加载完成后发送#插件帮助可以获取命令图
+| 指令 | 说明 |
+|------|------|
+| `#命令总览` | 查看当前所有已加载插件的命令正则（转发消息，每 50 条一页） |
+| `#测试命令 xxx` | 查看哪些插件会响应指令 xxx，用于排查命令冲突 |
+| `#测试执行命令 xxx` | 实际执行该指令并显示返回结果 |
 
-#### 更新
+### 插件管理器自身
 
-发送#插件更新进行插件管理器更新
-
-或者在xitian-plugin目录打开cmd手动`git pull`
-
-#### 链接
-
-- [云崽](https://gitee.com/Le-niao/Yunzai-Bot)
-- [插件库](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
-
-#### 指令
-
-| 功能 | 指令 | 作用 |
-|----|----|----|
-| 安装plugin插件 | #安装插件+仓库地址 | 从plugin仓库中克隆插件 |
-| (批量)安装插件 | #(批量)安装插件 | 通过QQ发送一个或多个js插件来安装 |
-| 停用/启用插件 | #停用/启用插件 | 暂时停用或启用一个插件 |
-| 删除/恢复插件 | #删除/恢复插件 | 暂时将一个插件扔到回收站 |
-| 删除plugin插件 | #删除插件+插件名(如xitian-plugin) | 删除plugin插件所有文件 |
-| 彻底删除插件 | #彻底插件 | 将一个插件彻底删除 |
-| 创建/删除分组 | #创建/删除分组 | 创建或删除一个插件分组 |
-| (插件)设置分组 | #(插件)设置分组 | 设置一个插件的分组，便于管理 |
-| 插件更新 | #插件(管理器)更新 | 更新插件管理器 |
-| 插件帮助 | #插件(管理器)帮助 | 查看所有的指令 |
-
-#### 其他
-
-- 素材来源于网络，仅供交流学习使用
-- 严禁用于商业和非法用途
-- 暂无群号，出现问题可以提交issue（建议github，因为有邮件提醒）
-- 最后求个star~
-
-[![Star History Chart](https://api.star-history.com/svg?repos=XiTianGame/xitian-plugin&type=Date)](https://star-history.com/#XiTianGame/xitian-plugin&Date)
+| 指令 | 说明 |
+|------|------|
+| `#插件帮助` / `#插件菜单` / `#插件help` | 查看指令帮助图 |
+| `#插件更新` | git pull 更新插件管理器，成功后自动重启 |
+| `#插件强制更新` | 放弃本地改动后更新，用于解决更新冲突 |
+| `#插件版本` | 查看版本与更新记录图 |
+| `#插件更新日志` | 查看最近更新日志（转发消息） |
 
 ---
 
@@ -204,6 +172,12 @@ ps：插件管理器会自动进行依赖安装
 
 
 <!-- cmds-end -->
+
+## 鸣谢
+
+- V2 插件管理器 2.0 — 本插件原型来源（记录于插件版本日志）
+- 素材来源于网络，仅供交流学习使用
+
 ---
 
 ← [返回插件列表](./)
