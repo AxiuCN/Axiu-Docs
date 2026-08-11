@@ -23,6 +23,7 @@
 - [genshin](genshin)（18 个模块，66 条指令）
 - [Git-Plugin](Git-Plugin)（7 个模块，14 条指令）
 - [Guoba-Plugin](Guoba-Plugin)（4 个模块，5 条指令）
+- [Help-Hutao-Plugin](Help-Hutao-Plugin)（1 个模块，5 条指令）
 - [LinkFlow-Plugin](LinkFlow-Plugin)（6 个模块，23 条指令）
 - [MCSM-Plugin](MCSM-Plugin)（5 个模块，22 条指令）
 - [miao-plugin](miao-plugin)（8 个模块，56 条指令）
