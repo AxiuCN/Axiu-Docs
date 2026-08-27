@@ -7,13 +7,22 @@ Desktop.ini
 .vscode/
 .idea/
 
-# Claude Code 工作区
+# Claude Code / DeepSeek Harness 工作区
 .claude/
+.dsh/
 CLAUDE.md
+AGENTS.md
 
 # 依赖
 node_modules/
 
+# 包管理器（pnpm 审批配置本地文件，不随仓库分发）
+pnpm-workspace.yaml
+pnpm-lock.yaml
+
 # vitepress 构建产物
 .vitepress/dist/
 .vitepress/cache/
+
+# dry-run 预演产物
+.vitepress/.dry/

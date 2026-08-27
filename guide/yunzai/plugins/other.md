@@ -17,7 +17,7 @@
 
 | 正则表达式 | 处理函数 |
 |-----------|---------|
-| `^#安装(插件\|Atlas\|genshin\|DF\|ws\|TRSS\|miao\|Philia\|Guoba\|yenai\|flower\|xianyu\|earth-k\|useless\|StarRail\|xiaoyao-cvs\|trss-xianxin\|Telegram\|Discord\|WeChat\|QQBot\|Route\|ICQQ\|KOOK)(-\[Pp\]lugin)?$` | install |
+| `^#安装(插件\|Atlas\|genshin\|DF\|ws\|TRSS\|miao\|Philia\|Guoba\|yenai\|flower\|xianyu\|earth-k\|useless\|StarRail\|xiaoyao-cvs\|trss-xianxin\|Telegram\|Discord\|WeChat\|QQBot\|Route\|ICQQ\|KOOK\|Secluded)(-\[Pp\]lugin)?$` | install |
 
 ## other/restart.js
 

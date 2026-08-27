@@ -174,7 +174,7 @@ const regSide = regular.map(r =>
 const block = '            { text: \'插件列表\', collapsed: true, items: [\n' +
   '              { text: \'概览\', link: \'/guide/yunzai/plugins/\' },\n' +
   [...dirSide, ...regSide].join('\n') + '\n            ], },';
-cfg = cfg.replace(/{ text: '插件列表', collapsed: true, items: \[[\s\S]*?\], },/, block);
+cfg = cfg.replace(/{ text: '插件列表', collapsed: true, items: \[[\s\S]*?\],? },/, block);
 writeFileSync(base + '/.vitepress/config.ts', cfg);
 console.log('  config.ts 侧边栏已更新');
 console.log('完成');
